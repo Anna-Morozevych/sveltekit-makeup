@@ -3,6 +3,7 @@
     import { auth, db } from "../lib/firebase/firebase";
     import { goto } from '$app/navigation';
     import { doc, setDoc } from "firebase/firestore";
+    import { base } from '$app/paths';
 
   let email = '';
   let password = '';

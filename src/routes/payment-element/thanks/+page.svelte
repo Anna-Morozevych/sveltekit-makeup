@@ -1,3 +1,7 @@
+<script>
+   import { base } from '$app/paths';
+</script>
+
 <section>
   <div class="container">
     <div class=" thanks page-padding">
@@ -9,9 +13,9 @@
           Thanks for shopping with us.
         </h2>
 
-        <img class="thanks__img" src="/thank-you1.jpg" alt="thank you">
+        <img class="thanks__img" src="thank-you1.jpg" alt="thank you">
 
-        <a href="/" class="bread-crumbs__link">Back to Home page</a>
+        <a href="{base}/" class="bread-crumbs__link">Back to Home page</a>
       </div>
     </div>
   </div>

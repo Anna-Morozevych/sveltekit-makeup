@@ -27,13 +27,13 @@
 <nav class="navbar page-padding">
   <div class="container">
     <div class="navbar__body">
-      <a href="{base}" class="navbar__logo">
-        <img src="/cosmetic.png" class="navbar__logo-img" alt="logo">
+      <a href="{base}/" class="navbar__logo">
+        <img src="cosmetic.png" class="navbar__logo-img" alt="logo">
       </a>
       <div class="navbar__menu">
 
         <label for="menu-bar" class="navbar__menu-icon">
-          <img src="/menu.png" alt="menu">
+          <img src="menu.png" alt="menu">
         </label>
         <input type="checkbox" id="menu-bar">
 
@@ -60,10 +60,10 @@
 
         <div class="profile">
           <a href="{base}/profile" class="profile__icon-link">
-            <img src="/icon-profile.svg" alt="profile" class="profile__icon">
+            <img src="icon-profile.svg" alt="profile" class="profile__icon">
           </a>
           <a href="{base}/basket" class="profile__icon-link">
-            <img src="/icon-bag.svg" alt="bag" class="profile__icon last">
+            <img src="icon-bag.svg" alt="bag" class="profile__icon last">
             <div class="profile__bag-num">
               {productsAmount}
             </div>

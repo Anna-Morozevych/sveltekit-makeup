@@ -17,7 +17,7 @@
           {#each categories as link}
             <a href={`${base}/categories/${link.slug}`} class="categories__item">
               <img
-                src={`/${link.name.toLowerCase().replace(' ', '')}.png`}
+                src={`${link.name.toLowerCase().replace(' ', '')}.png`}
                 alt={link}
                 class="categories__item-img"
               >

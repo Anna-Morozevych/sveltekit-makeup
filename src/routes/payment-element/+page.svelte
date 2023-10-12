@@ -134,8 +134,6 @@
                 </div>
               {/each}
 
-              <p></p>
-
             </div>
               <form on:submit|preventDefault={submit}>
                 <LinkAuthenticationElement />

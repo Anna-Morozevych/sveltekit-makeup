@@ -7,7 +7,7 @@
   <div class="container">
     <div class="footer__body">
       <a class="logo-link" href={base}>
-        <img class="footer__logo" src="/cosmetic.png" alt="logo">
+        <img class="footer__logo" src="cosmetic.png" alt="logo">
       </a>
 
       <div class="footer__colomns">
@@ -39,13 +39,13 @@
 
         <div class="footer__colomn footer__social">
           <a class="social-link" href="mailto: anna.morozevych@gmail.com">
-            <img src="/mail.svg" alt="mail">
+            <img src="mail.svg" alt="mail">
           </a>
           <a class="social-link" href="https://github.com/Anna-Morozevych">
-            <img src="/github.svg" alt="github">
+            <img src="github.svg" alt="github">
           </a>
           <a class="social-link" href="https://www.linkedin.com/in/anna-morozevych-39a25823a/">
-            <img src="/linkedin.svg" alt="linhedin">
+            <img src="linkedin.svg" alt="linhedin">
           </a>
         </div>
       </div>
