@@ -4,7 +4,7 @@
   import { register } from "swiper/element/bundle";
   import Categories from "$lib/components/Categories.svelte";
   import Logos from "$lib/components/Logos.svelte";
-  import { categories } from "../data/categories";
+  import { categories } from "$lib/../data/categories";
   import { onMount } from "svelte";
   import { base } from '$app/paths';
 
