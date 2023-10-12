@@ -1,6 +1,5 @@
 <script>
   import { page } from '$app/stores';
-  import '../global.css';
   import Navbar from "$lib/components/Navbar.svelte";
   import { goto } from '$app/navigation';
 
