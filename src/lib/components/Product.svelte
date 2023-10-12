@@ -1,7 +1,7 @@
 <script>
   import { page } from '$app/stores';
   import { get } from 'svelte/store';
-  import {cartItems, addToCart} from '../store/store';
+  import {cartItems, addToCart} from '../../store/store';
   import { onMount } from 'svelte';
   export let product;
   import { base } from '$app/paths';
