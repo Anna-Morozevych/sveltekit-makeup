@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
   import Navbar from "$lib/components/Navbar.svelte";
   import { goto } from '$app/navigation';
-  // import '../global.css';
+  import '../global.css';
 
 
   import {onMount} from 'svelte';
