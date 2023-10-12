@@ -2,6 +2,8 @@
   import { page } from '$app/stores';
   import Navbar from "$lib/components/Navbar.svelte";
   import { goto } from '$app/navigation';
+  // import '../global.css';
+
 
   import {onMount} from 'svelte';
   import { onAuthStateChanged } from 'firebase/auth';
