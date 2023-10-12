@@ -3,6 +3,11 @@
   import { cartItems } from "../store/store";
   import { get } from "svelte/store";
   import { base } from '$app/paths';
+  import Logo from '$lib/images/cosmetic.png';
+  import Menu from '$lib/images/menu.png';
+  import Profile from '$lib/images/icon-profile.svg';
+  import Cart from '$lib/images/icon-bag.svg';
+
 
   let carts = get(cartItems);
   let productsAmount = carts.length;
@@ -28,12 +33,12 @@
   <div class="container">
     <div class="navbar__body">
       <a href="{base}/" class="navbar__logo">
-        <img src="cosmetic.png" class="navbar__logo-img" alt="logo">
+        <img src={Logo} class="navbar__logo-img" alt="logo">
       </a>
       <div class="navbar__menu">
 
         <label for="menu-bar" class="navbar__menu-icon">
-          <img src="menu.png" alt="menu">
+          <img src={Menu} alt="menu">
         </label>
         <input type="checkbox" id="menu-bar">
 
@@ -60,10 +65,10 @@
 
         <div class="profile">
           <a href="{base}/profile" class="profile__icon-link">
-            <img src="icon-profile.svg" alt="profile" class="profile__icon">
+            <img src={Profile} alt="profile" class="profile__icon">
           </a>
           <a href="{base}/basket" class="profile__icon-link">
-            <img src="icon-bag.svg" alt="bag" class="profile__icon last">
+            <img src={Cart} alt="bag" class="profile__icon last">
             <div class="profile__bag-num">
               {productsAmount}
             </div>

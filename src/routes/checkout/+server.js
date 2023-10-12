@@ -1,5 +1,4 @@
 import Stripe from "stripe";
-
  const stripe = new Stripe('sk_test_51Nrh6kGrd0iKibjNHsn2E6DYzb2TqbSA2ZWF4O39vcYPHwy45GFlUEa2DCRknDQ0QAZ2u32rWyKcFM30SuDCCPNN00bxwQIRQr', {
   apiVersion: "2023-08-16"
 });

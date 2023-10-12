@@ -1,5 +1,6 @@
 <script>
-   import { base } from '$app/paths';
+  import { base } from '$app/paths';
+  import Thanks from '$lib/images/thank-you1.jpg';
 </script>
 
 <section>
@@ -13,7 +14,7 @@
           Thanks for shopping with us.
         </h2>
 
-        <img class="thanks__img" src="thank-you1.jpg" alt="thank you">
+        <img class="thanks__img" src={Thanks} alt="thank you">
 
         <a href="{base}/" class="bread-crumbs__link">Back to Home page</a>
       </div>

@@ -5,6 +5,7 @@
   import { goto } from '$app/navigation';
   import { authUser } from "../../store/store";
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
 
   let user = {};
   let userId = '';
@@ -66,7 +67,7 @@
         </div>
         <div class="bread-crumbs">
           <div class="bread-crumbs__body">
-            <a href="/" class="bread-crumbs__link bread-crumbs__link--active">My profile</a>
+            <a href={base} class="bread-crumbs__link bread-crumbs__link--active">My profile</a>
             <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 96 960 960" width="16" fill="#db5e95">
               <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z"/>
             </svg>
@@ -78,13 +79,13 @@
 
         <div class="profile__content">
           <div class="profile__nav">
-            <a href="/profile" class="profile__nav-link" on:click={setActiveLink}>
+            <a href="{base}/profile" class="profile__nav-link" on:click={setActiveLink}>
               My data
             </a>
-            <a href="/profile/my-orders" class="profile__nav-link" on:click={setActiveLink}>
+            <a href="{base}/profile/my-orders" class="profile__nav-link" on:click={setActiveLink}>
               My orders
             </a>
-            <a href="/profile/my-comments" class="profile__nav-link" on:click={setActiveLink}>
+            <a href="{base}/profile/my-comments" class="profile__nav-link" on:click={setActiveLink}>
               My comments
             </a>
             <button class="btn" on:click={logOutHandler}>

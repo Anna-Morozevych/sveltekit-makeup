@@ -1,10 +1,9 @@
 <script>
-  // import { categories } from '../data/categories';
   import { base } from '$app/paths';
 
   export let categories;
 
-  // const { name, slug } = categories;
+  console.log(base);
 
 </script>
 
@@ -15,9 +14,9 @@
         <h1 class="subtitle categories__title">Categories</h1>
         <div class="categories__items">
           {#each categories as link}
-            <a href={`${base}/categories/${link.slug}`} class="categories__item">
+            <a href="{base}/categories/{link.slug}" class="categories__item">
               <img
-                src={`${link.name.toLowerCase().replace(' ', '')}.png`}
+                src={`${base}/${link.name.toLowerCase().replace(' ', '')}.png`}
                 alt={link}
                 class="categories__item-img"
               >

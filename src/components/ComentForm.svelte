@@ -2,6 +2,7 @@
   import { addDoc } from "firebase/firestore";
   import { commentsRef } from "../lib/firebase/firebase";
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
 
   export let product;
 
@@ -77,19 +78,19 @@
       <form class="comment-form" on:submit|preventDefault={postComment}>
         <div class="raiting-box">
           <div class="stars" id="stars">
-            <a href="/" on:click|preventDefault={setRaiting}>
+            <a href={base} on:click|preventDefault={setRaiting}>
               <i class="fa-solid fa-star" id="1"></i>
             </a>
-            <a href="/" on:click|preventDefault={setRaiting}>
+            <a href={base} on:click|preventDefault={setRaiting}>
               <i class="fa-solid fa-star" id="2"></i>
             </a>
-            <a href="/" on:click|preventDefault={setRaiting}>
+            <a href={base} on:click|preventDefault={setRaiting}>
               <i class="fa-solid fa-star" id="3"></i>
             </a>
-            <a href="/" on:click|preventDefault={setRaiting}>
+            <a href={base} on:click|preventDefault={setRaiting}>
               <i class="fa-solid fa-star" id="4"></i>
             </a>
-            <a href="/" on:click|preventDefault={setRaiting}>
+            <a href={base} on:click|preventDefault={setRaiting}>
               <i class="fa-solid fa-star" id="5"></i>
             </a>
           </div>

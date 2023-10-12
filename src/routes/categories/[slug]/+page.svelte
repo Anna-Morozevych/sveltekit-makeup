@@ -1,8 +1,8 @@
 <script>
-
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import Products from '../../../components/Products.svelte';
+  import { base } from '$app/paths';
 
   export let data;
 
@@ -128,11 +128,11 @@
   <div class="container">
     <div class="bread-crumbs page-padding">
       <div class="bread-crumbs__body">
-        <a href="/" class="bread-crumbs__link bread-crumbs__link--active">Home</a>
+        <a href={base} class="bread-crumbs__link bread-crumbs__link--active">Home</a>
         <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 96 960 960" width="16" fill="#db5e95">
           <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z"/>
         </svg>
-        <a href="/categories" class="bread-crumbs__link bread-crumbs__link--active">Categories</a>
+        <a href="{base}/categories" class="bread-crumbs__link bread-crumbs__link--active">Categories</a>
         <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 96 960 960" width="16" fill="#db5e95">
           <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z"/>
         </svg>

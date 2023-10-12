@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { register } from "swiper/element";
+  import { base } from '$app/paths';
 
   export let reviewedProducts;
 
@@ -25,7 +26,7 @@
       >
         {#each reviewedProducts as product}
           <swiper-slide>
-            <a href={product.url}>
+            <a href="{base}/{product.url}">
               <img src={product.api_featured_image} alt={product.name} class="reviewed__img">
 
               <div class="reviewed__info">

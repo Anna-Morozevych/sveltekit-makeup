@@ -43,7 +43,7 @@
   {/if}
   
   {#if isMyCommentPage}
-    <a href={base/comment.url} class="comment__link">{comment.product.name}</a>
+    <a href="{base}/{comment.url}" class="comment__link">{comment.product.name}</a>
   {/if}
   <span class="comment-info__date">{date}</span>
 

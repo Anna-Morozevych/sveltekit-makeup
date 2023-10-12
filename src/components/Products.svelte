@@ -2,6 +2,7 @@
   export let title;
   export let products;
   export let url;
+  import { base } from '$app/paths';
 
   let productsAmount = 20;
   let productsToRender = [...products].slice(0, productsAmount);
@@ -38,9 +39,9 @@
           </a>
 
           <div class="product__info">
-            <a href="/" class="product__name">
+            <p class="product__name">
               {product.name.trim()}
-            </a>
+            </p>
             <div class="product__bottom-info">
               <span class="product__brand">{product.brand}</span>
 

@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
 
   const logos = [
     'chanel',
@@ -20,7 +21,7 @@
     <div class="line__wrap">
       {#each logos as logo}
         <div class="line__logo-wrap">
-          <img src={`${logo}.png`} alt={logo} class="line__logo">
+          <img src="{base}/{logo}.png" alt={logo} class="line__logo">
         </div>
       {/each}
     </div>
@@ -28,7 +29,7 @@
     <div class="line__wrap">
       {#each logos as logo}
         <div class="line__logo-wrap">
-          <img src={`${logo}.png`} alt={logo} class="line__logo">
+          <img src="{base}/{logo}.png" alt={logo} class="line__logo">
         </div>
       {/each}
     </div>

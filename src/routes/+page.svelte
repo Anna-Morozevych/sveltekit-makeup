@@ -6,6 +6,7 @@
   import Logos from "../components/Logos.svelte";
   import { categories } from "../data/categories";
   import { onMount } from "svelte";
+  import { base } from '$app/paths';
 
   onMount(() => {
     // register Swiper custom elements
@@ -23,42 +24,42 @@
 >
   <swiper-slide>
     <div class="slide-wrap">
-      <img src="broves.jpg" alt="broves" class="slide-img" />
+      <img src="{base}/broves.jpg" alt="broves" class="slide-img" />
     </div>
   </swiper-slide>
   <swiper-slide>
     <div class="slide-wrap">
-      <img src="eyeshadow.jpg" alt="eyeshadow" class="slide-img" />
+      <img src="{base}/eyeshadow.jpg" alt="eyeshadow" class="slide-img" />
     </div>
   </swiper-slide>
   <swiper-slide>
     <div class="slide-wrap">
-      <img src="lipstickslde.png" alt="lipstick" class="slide-img" />
+      <img src="{base}/lipstickslde.png" alt="lipstick" class="slide-img" />
     </div>
   </swiper-slide>
   <swiper-slide>
     <div class="slide-wrap">
-      <img src="mascaraslide.png" alt="mascara" class="slide-img" />
+      <img src="{base}/mascaraslide.png" alt="mascara" class="slide-img" />
     </div>
   </swiper-slide>
   <swiper-slide>
     <div class="slide-wrap">
-      <img src="nails.jpg" alt="nails" class="slide-img" />
+      <img src="{base}/nails.jpg" alt="nails" class="slide-img" />
     </div>
   </swiper-slide>
   <swiper-slide>
     <div class="slide-wrap">
-      <img src="banner.jpg" alt="makeup" class="slide-img" />
+      <img src="{base}/banner.jpg" alt="makeup" class="slide-img" />
     </div>
   </swiper-slide>
   <swiper-slide>
     <div class="slide-wrap">
-      <img src="makeup1.jpeg" alt="makeup" class="slide-img" />
+      <img src="{base}/makeup1.jpeg" alt="makeup" class="slide-img" />
     </div>
   </swiper-slide>
   <swiper-slide>
     <div class="slide-wrap">
-      <img src="rock-a-nude-lip.webp" alt="lips" class="slide-img" />
+      <img src="{base}/rock-a-nude-lip.webp" alt="lips" class="slide-img" />
     </div>
   </swiper-slide>
 </swiper-container>

@@ -1,13 +1,17 @@
 <script>
   import { base } from '$app/paths';
   export let categories;
+  import Logo from '$lib/images/cosmetic.png';
+  import Mail from '$lib/images/mail.svg';
+  import Github from '$lib/images/github.svg';
+  import Linkedin from '$lib/images/linkedin.svg';
 </script>
 
 <footer class="footer page-padding">
   <div class="container">
     <div class="footer__body">
       <a class="logo-link" href={base}>
-        <img class="footer__logo" src="cosmetic.png" alt="logo">
+        <img class="footer__logo" src={Logo} alt="logo">
       </a>
 
       <div class="footer__colomns">
@@ -39,13 +43,13 @@
 
         <div class="footer__colomn footer__social">
           <a class="social-link" href="mailto: anna.morozevych@gmail.com">
-            <img src="mail.svg" alt="mail">
+            <img src={Mail} alt="mail">
           </a>
           <a class="social-link" href="https://github.com/Anna-Morozevych">
-            <img src="github.svg" alt="github">
+            <img src={Github} alt="github">
           </a>
           <a class="social-link" href="https://www.linkedin.com/in/anna-morozevych-39a25823a/">
-            <img src="linkedin.svg" alt="linhedin">
+            <img src={Linkedin} alt="linhedin">
           </a>
         </div>
       </div>

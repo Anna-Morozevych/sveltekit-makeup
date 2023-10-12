@@ -4,6 +4,7 @@
   import {cartItems, addToCart} from '../store/store';
   import { onMount } from 'svelte';
   export let product;
+  import { base } from '$app/paths';
   
   let carts = get(cartItems);
   let cartItemIndex = carts.findIndex(item => item.id === product.id);
@@ -15,7 +16,7 @@
   })
 
   let url = '';
-  url = $page.url.pathname;
+  url = `${base}/${$page.url.pathname}`;
 
   const {
     id,
@@ -91,7 +92,7 @@
 
 
 <div class="product page-padding">
-  <img src="/wave1.png" alt="background" class="product__bg">
+  <img src="{base}/wave1.png" alt="background" class="product__bg">
 
   <div class="product__body">
     <h1 class="subtitle product__name">

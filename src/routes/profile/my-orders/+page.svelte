@@ -2,6 +2,7 @@
   import { getDocs } from "firebase/firestore";
   import { ordersRef } from "../../../lib/firebase/firebase";
   import { onMount } from "svelte";
+  import { base } from '$app/paths';
  
   let orders = [];
 
@@ -62,7 +63,7 @@
     You haven't ordered anything yet
   </h2>
 
-  <a href="/categories" class="btn start-shopping">
+  <a href="{base}/categories" class="btn start-shopping">
     Start shopping
   </a>
 {/if}
