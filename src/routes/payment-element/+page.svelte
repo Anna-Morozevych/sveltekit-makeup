@@ -7,7 +7,7 @@
   import { get } from 'svelte/store';
   import { cartItems } from '../../store/store';
   import { addDoc } from 'firebase/firestore';
-  import { ordersRef } from '../../lib/firebase/firebase';
+  import { ordersRef } from '$lib/firebase/firebase';
 
 
   let stripe = null;

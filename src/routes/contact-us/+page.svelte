@@ -1,7 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import { addDoc } from "firebase/firestore";
-  import { messagesRef } from "../../lib/firebase/firebase";
+  import { messagesRef } from "$lib/firebase/firebase";
 
   let name = '';
   let email = '';

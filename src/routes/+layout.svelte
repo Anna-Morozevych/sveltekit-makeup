@@ -1,15 +1,15 @@
 <script>
   import { page } from '$app/stores';
   import '../global.css';
-  import Navbar from "../components/Navbar.svelte";
+  import Navbar from "$lib/components/Navbar.svelte";
   import { goto } from '$app/navigation';
 
   import {onMount} from 'svelte';
   import { onAuthStateChanged } from 'firebase/auth';
-  import { auth, db } from '../lib/firebase/firebase';
+  import { auth, db } from '$lib/firebase/firebase';
   import { doc, onSnapshot } from 'firebase/firestore';
   import { authUser } from '../store/store'
-    import Footer from '../components/Footer.svelte';
+    import Footer from '$lib/components/Footer.svelte';
     import { categories } from '../data/categories';
 
   const nonAuthRoutes = ['/', 'categories'];

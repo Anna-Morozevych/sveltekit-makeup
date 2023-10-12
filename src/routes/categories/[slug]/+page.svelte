@@ -1,7 +1,7 @@
 <script>
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
-  import Products from '../../../components/Products.svelte';
+  import Products from '$lib/components/Products.svelte';
   import { base } from '$app/paths';
 
   export let data;

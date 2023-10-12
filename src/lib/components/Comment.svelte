@@ -1,6 +1,6 @@
 <script>
   import { doc, getDoc } from "firebase/firestore";
-  import { db } from "../lib/firebase/firebase";
+  import { db } from "$lib/firebase/firebase";
   import { onMount } from "svelte";
   import { page } from '$app/stores';
   import { base } from '$app/paths';

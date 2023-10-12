@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { cartItems } from "../store/store";
+  import { cartItems } from "../../store/store";
   import { get } from "svelte/store";
   import { base } from '$app/paths';
   import Logo from '$lib/images/cosmetic.png';

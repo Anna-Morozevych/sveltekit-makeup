@@ -1,14 +1,14 @@
 <script>
   import { base } from '$app/paths';
   import { page } from '$app/stores';
-  import ComentForm from '../../../../components/ComentForm.svelte';
-  import Comment from '../../../../components/Comment.svelte';
-  import Product from '../../../../components/Product.svelte';
+  import ComentForm from '$lib/components/ComentForm.svelte';
+  import Comment from '$lib/components/Comment.svelte';
+  import Product from '$lib/components/Product.svelte';
 
   import { onSnapshot, query, where } from "firebase/firestore";
-  import { commentsRef } from '../../../../lib/firebase/firebase';
+  import { commentsRef } from '$lib/firebase/firebase';
     import { onMount } from 'svelte';
-    import ReviewedProducts from '../../../../components/ReviewedProducts.svelte';
+    import ReviewedProducts from '$lib/components/ReviewedProducts.svelte';
 
   export let data;
 

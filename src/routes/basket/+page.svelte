@@ -4,7 +4,7 @@
   import { cartItems, removeFromCart } from "../../store/store";
   import { get } from "svelte/store";
   import { addDoc } from 'firebase/firestore';
-  import { ordersRef } from "../../lib/firebase/firebase";
+  import { ordersRef } from "$lib/firebase/firebase";
 
   let carts = get(cartItems);
   let total = 0;

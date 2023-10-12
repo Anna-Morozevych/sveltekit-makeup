@@ -1,5 +1,5 @@
 <script>
-  import Authenticate from "../../components/Authenticate.svelte";
+  import Authenticate from "$lib/components/Authenticate.svelte";
 </script>
 
 

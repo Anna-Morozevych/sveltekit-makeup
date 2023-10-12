@@ -1,7 +1,7 @@
 <script>
   import { page } from '$app/stores';
   import { signOut } from "firebase/auth";
-  import { auth } from "../../lib/firebase/firebase";
+  import { auth } from "$lib/firebase/firebase";
   import { goto } from '$app/navigation';
   import { authUser } from "../../store/store";
   import { onMount } from 'svelte';

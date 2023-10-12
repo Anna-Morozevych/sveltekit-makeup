@@ -1,8 +1,8 @@
 <script>
     import { getDocs, query, where } from "firebase/firestore";
     import { onMount } from "svelte";
-    import { commentsRef } from "../../../lib/firebase/firebase";
-    import Comment from "../../../components/Comment.svelte";
+    import { commentsRef } from "$lib/firebase/firebase";
+    import Comment from "$lib/components/Comment.svelte";
 
   let authorId = '';
   let allUserComents = []

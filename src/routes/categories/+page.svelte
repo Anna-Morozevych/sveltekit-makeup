@@ -1,6 +1,6 @@
 <script>
-  import Categories from "../../components/Categories.svelte";
-  import Logos from '../../components/Logos.svelte';
+  import Categories from "$lib/components/Categories.svelte";
+  import Logos from '$lib/components/Logos.svelte';
 
   export let data;
 

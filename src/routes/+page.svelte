@@ -2,8 +2,8 @@
 
   // import function to register Swiper custom elements
   import { register } from "swiper/element/bundle";
-  import Categories from "../components/Categories.svelte";
-  import Logos from "../components/Logos.svelte";
+  import Categories from "$lib/components/Categories.svelte";
+  import Logos from "$lib/components/Logos.svelte";
   import { categories } from "../data/categories";
   import { onMount } from "svelte";
   import { base } from '$app/paths';

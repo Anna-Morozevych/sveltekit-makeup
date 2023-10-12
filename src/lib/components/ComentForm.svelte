@@ -1,6 +1,6 @@
 <script>
   import { addDoc } from "firebase/firestore";
-  import { commentsRef } from "../lib/firebase/firebase";
+  import { commentsRef } from "$lib/firebase/firebase";
   import { page } from '$app/stores';
   import { base } from '$app/paths';
 
