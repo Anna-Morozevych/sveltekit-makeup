@@ -43,7 +43,7 @@
     // })
     //   .then(result => console.log(result))
     // checkout()
-    goto('/payment-element')
+    goto(`${base}/payment-element`)
   }
 
   async function checkout() {

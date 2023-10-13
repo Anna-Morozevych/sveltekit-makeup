@@ -8,6 +8,7 @@
   import { cartItems } from '../../store/store';
   import { addDoc } from 'firebase/firestore';
   import { ordersRef } from '$lib/firebase/firebase';
+  import { base } from '$app/paths';
 
 
   let stripe = null;
@@ -79,7 +80,7 @@
     setOrderDetails();
     cartItems.set([]);
     localStorage.removeItem('busket_products');
-    goto('/payment-element/thanks')
+    goto(`${base}/payment-element/thanks`)
   }
 
   function addToOrders() {
