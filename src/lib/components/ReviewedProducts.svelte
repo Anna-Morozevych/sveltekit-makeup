@@ -26,7 +26,7 @@
       >
         {#each reviewedProducts as product}
           <swiper-slide>
-            <a href="{base}/{product.url}">
+            <a href="{product.url}">
               <img src={product.api_featured_image} alt={product.name} class="reviewed__img">
 
               <div class="reviewed__info">

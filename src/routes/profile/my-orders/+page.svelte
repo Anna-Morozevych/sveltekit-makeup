@@ -45,7 +45,7 @@
         <div class="product">
           <img class="product__img" src={product.api_featured_image} alt={product.name}>
           <div class="product__details">
-            <a class="product__link" href={product.url}>{product.name}</a>
+            <a class="product__link" href="{base}/{product.url}">{product.name}</a>
             <p class="product__price">${product.price}</p>
           </div>
         </div>
