@@ -17,7 +17,18 @@
   let filteredList = data.item;
   let price = 0;
 
-  let sortBy = ''
+  let sortBy = '';
+  let productsAmount = 20;
+  let productsToRender = [...filteredList].slice(0, productsAmount);
+  $:console.log(productsToRender);
+
+  function loadMore() {
+    console.log('Load more');
+    productsAmount += 20;
+
+    productsToRender = [...filteredList].slice(0, productsAmount);
+  }
+
 
   function getBrands() {
     let list = [];
@@ -35,8 +46,8 @@
     return list.sort();
   }
 
-  function filterProducts(input, brandsList) {
-    const list = data.item;
+  function filterByBrand(input, brandsList, productItems) {
+    const list = productItems;
     let result = [...list];
 
     if (selectedBrands.length > 0) {
@@ -69,38 +80,44 @@
       })
     }
 
-    return filteredList = result;
+    return result;
   }
 
-  function filterByPrice(price) {
+  function updateProducts() {
+    let items = data.item;
+    items = filterByPrice(price, items);
+    items = filterByBrand(searchTerm, selectedBrands, items);
+    items = sortProductsList(sortBy, items);
+
+    filteredList = items;
+    productsToRender = [...filteredList].slice(0, productsAmount);
+  }
+
+  function filterByPrice(price, productItems) {
     if (price === 0) {
-      return filteredList = data.item;
+      return productItems;
     }
 
-    return filteredList = filteredList.filter(el => +el.price <= price);
+    return productItems.filter(el => +el.price <= price);
   }
 
-  function sortProductsList(value) {
-
+  function sortProductsList(value, productItems) {
     switch (value) {
       case 'cheap':
-        filteredList = data.item.sort((el1, el2) => +el1.price - +el2.price);
-        break;
+        return productItems.sort((el1, el2) => +el1.price - +el2.price);
+
 
       case 'expensive':
-        filteredList = data.item.sort((el1, el2) => +el2.price - +el1.price);
-        break;
+        return productItems.sort((el1, el2) => +el2.price - +el1.price);
 
       case 'a-z':
-        filteredList = data.item.sort((el1, el2) => el1.name.toLowerCase().localeCompare(el2.name.toLowerCase()));
-        break;
+        return productItems.sort((el1, el2) => el1.name.toLowerCase().localeCompare(el2.name.toLowerCase()));
 
       case 'z-a':
-        filteredList = data.item.sort((el1, el2) => el2.name.toLowerCase().localeCompare(el1.name.toLowerCase()));
-        break;
+        return productItems.sort((el1, el2) => el2.name.toLowerCase().localeCompare(el1.name.toLowerCase()));
 
       default:
-        break;
+        return productItems;
     }
   }
 
@@ -108,8 +125,9 @@
     searchTerm = '';
     selectedBrands = [];
     price = 0;
-    filteredList = data.item;
     sortBy = '';
+    productsAmount = 20;
+    updateProducts();
   }
 
   onMount(() => {
@@ -158,7 +176,7 @@
               <select
                 class="sort"
                 bind:value={sortBy}
-                on:change={() => sortProductsList(sortBy)}
+                on:change={updateProducts}
               >
                 <option value="" class="sort__option">
                   Sort the list
@@ -188,7 +206,7 @@
                 class="filter__input"
                 type="text"
                 placeholder="Search..."
-                on:input={() => filterProducts(searchTerm, selectedBrands)}
+                on:input={updateProducts}
             >
             </div>
 
@@ -207,7 +225,7 @@
                         name={brand}
                         value={brand}
                         bind:group={selectedBrands}
-                        on:change={() => filterProducts(searchTerm, selectedBrands)}
+                        on:change={updateProducts}
                       >
                     {brand}
                     </label>
@@ -232,18 +250,23 @@
                 max=100
                 step=0.1
                 bind:value={price}
-                on:change={filterByPrice(price)}
+                on:change={updateProducts}
               >
               </div>
           </div>
         </div>
         <Products
           title={currentPage}
-          products={filteredList}
+          products={productsToRender}
           url={$page.url.pathname}
-
         />
       </div>
+
+      {#if filteredList.length !== productsToRender.length}
+        <button class="btn load-more" on:click={loadMore}>
+          Load more
+        </button>
+      {/if}
     </div>
 
   </div>
@@ -383,6 +406,10 @@
     height: 30px;
     width: 100%;
     padding: 3px 5px;
+  }
+
+  .load-more {
+    margin: 0 auto 60px;
   }
 
 </style>

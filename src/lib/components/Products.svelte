@@ -4,16 +4,16 @@
   export let url;
   import { base } from '$app/paths';
 
-  let productsAmount = 20;
-  let productsToRender = [...products].slice(0, productsAmount);
-  $:console.log(productsToRender);
+  // let productsAmount = 20;
+  // let productsToRender = [...products].slice(0, productsAmount);
+  // $:console.log(productsToRender);
 
-  function loadMore() {
-    console.log('Load more');
-    productsAmount += 20;
+  // function loadMore() {
+  //   console.log('Load more');
+  //   productsAmount += 20;
 
-    productsToRender = [...products].slice(0, productsAmount);
-  }
+  //   productsToRender = [...products].slice(0, productsAmount);
+  // }
 
 </script>
 
@@ -28,7 +28,7 @@
 
 
     <div class="products__list">
-      {#each productsToRender as product}
+      {#each products as product}
         <div class="products__item">
           <a href={`${url}/${product.id}`}>
             <img
@@ -59,11 +59,11 @@
     </div>
   </div>
 
-  {#if products.length !== productsToRender.length}
+  <!-- {#if products.length !== productsToRender.length}
     <button class="btn load-more" on:click={loadMore}>
       Load more
     </button>
-  {/if}
+  {/if} -->
 
 
 
@@ -150,9 +150,9 @@
   }
   
 
-  .load-more {
+  /* .load-more {
     margin: 40px auto 0;
-  }
+  } */
 
 
 
