@@ -16,7 +16,7 @@
   })
 
   let url = '';
-  url = `${base}/${$page.url.pathname}`;
+  url = $page.url.pathname;
 
   const {
     id,
