@@ -5,6 +5,7 @@
   import { get } from "svelte/store";
   import { addDoc } from 'firebase/firestore';
   import { ordersRef } from "$lib/firebase/firebase";
+  import { base } from '$app/paths';
 
   let carts = get(cartItems);
   let total = 0;
@@ -79,7 +80,7 @@
                     class="card__close"
                     on:click={removeCartHandler(cart.id)}
                   >
-                    <img src="/close.svg" alt="remove">
+                    <img src="{base}/close.svg" alt="remove">
                   </button>
 
                   <div class="card__img-wrap">
