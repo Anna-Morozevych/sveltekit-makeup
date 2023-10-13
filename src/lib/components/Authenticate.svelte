@@ -27,7 +27,7 @@
         createUserWithEmailAndPassword(auth, email, password)
           .then((cred) => {
             console.log('User created:', cred.user);
-            goto('/profile');
+            goto(`${base}/profile`);
             
           })
           .catch((err) => {
@@ -53,7 +53,7 @@
         signInWithEmailAndPassword(auth, email, password)
           .then((cred) => {
             console.log('User login:', cred.user);
-            goto('/profile');
+            goto(`${base}/profile`);
           })
       }
     } catch (err) {

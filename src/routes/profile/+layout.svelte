@@ -24,7 +24,7 @@
   function logOutHandler() {
     signOut(auth)
       .then(() => {
-        goto('/auth');
+        goto(`${base}/auth`);
         console.log('Logout')
       })
       .catch(err => {
@@ -40,7 +40,7 @@
     userId = window.localStorage.getItem('uid');
 
     if (!userId) {
-      goto('/auth');
+      goto(`${base}/auth`);
       return;
     }
 
